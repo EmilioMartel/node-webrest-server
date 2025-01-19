@@ -17,7 +17,7 @@ export class TodosController {
     const id = +req.params.id;
     if (isNaN(id)) return res.status(400).json({ error: `ID: ${id} is not a nubmer`})
     
-      const todo = await prisma.todo.findFirst({
+    const todo = await prisma.todo.findFirst({
       where: { id }
     });
 
